@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}Student List{% endblock title %}
+
+{% block content %}
+<center><h2>Student List</h2></center>
+<table class='table table-dark table-striped'>
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>Name</th>
+            <th>College</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in data %}
+        <tr>
+            <td>{{record.sid}}</td>
+            <td>{{record.name}}</td>
+            <td>{{record.coll}}</td>
+            <td>{{record.add}}</td>
+            <td>{{record.city}}</td>
+            <td>{{record.state}}</td>
+            <td>
+                <a><button type='button' class='btn btn-warning'>UPDATE</button></a>
+                <a><button type='button' class='btn btn-danger'>DELETE</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}Student Form{% endblock title %}
+
+{% block content %}
+<div class='container jumbotron'>
+    <center><h2>Student List</h2></center>
+    <form>
+        {% csrf_token %}
+        {{form}}
+        <input type='submit' class='btn btn-success col-6' value='Add Student'>
+        <input type='reset' class='btn btn-warning col-6 float-right' value='Add Student'>
+    </form>
+</div>
+{% endblock content %}
