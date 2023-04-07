@@ -25,8 +25,8 @@
             <td>{{record.city}}</td>
             <td>{{record.state}}</td>
             <td>
-                <a><button type='button' class='btn btn-warning'>UPDATE</button></a>
-                <a><button type='button' class='btn btn-danger'>DELETE</button></a>
+                <a href={% url 'student_update_url' record.id %}><button type='button' class='btn btn-warning'>UPDATE</button></a>
+                <a href={% url 'student_delete_url' record.id %}><button type='button' class='btn btn-danger'>DELETE</button></a>
             </td>
         </tr>
         {% endfor %}

@@ -5,7 +5,7 @@
 {% block content %}
 <div class='container jumbotron'>
     <center><h2>Student List</h2></center>
-    <form>
+    <form method='post'>
         {% csrf_token %}
         {{form}}
         <input type='submit' class='btn btn-success col-6' value='Add Student'>
